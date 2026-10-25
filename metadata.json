@@ -1,0 +1,6 @@
+{
+  "name": "VibeRoom - Sala Privada com Jogos, Voz & Música",
+  "description": "Espaço privado para até 6 amigos com chat, voz em tempo real com redução de ruído, lousa colaborativa, jogos multiplayer e sincronização de música.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

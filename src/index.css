@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  body {
+    background-color: #090d16;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Minimal custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.15);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.3);
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes emotionPulseStrongWeak {
+  0% {
+    opacity: 0.18;
+    transform: scale(1);
+    filter: brightness(0.95);
+  }
+  28% {
+    opacity: 0.65;
+    transform: scale(1.02);
+    filter: brightness(1.35);
+  }
+  58% {
+    opacity: 0.25;
+    transform: scale(0.99);
+    filter: brightness(1.05);
+  }
+  82% {
+    opacity: 0.55;
+    transform: scale(1.015);
+    filter: brightness(1.25);
+  }
+  100% {
+    opacity: 0.18;
+    transform: scale(1);
+    filter: brightness(0.95);
+  }
+}
+
+.animate-emotion-pulse {
+  animation: emotionPulseStrongWeak 2.8s ease-in-out infinite;
+}
+
+@keyframes emojiFloatUpwards {
+  0% {
+    transform: translateY(105vh) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(-25vh) scale(1.25) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.animate-emoji-rise {
+  animation: emojiFloatUpwards linear forwards;
+}
+
